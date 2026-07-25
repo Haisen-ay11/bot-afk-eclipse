@@ -17,7 +17,6 @@ const MovementModule  = require('./modules/movement');
 const CombatModule    = require('./modules/combat');
 const InventoryModule = require('./modules/inventory');
 const CommandsModule  = require('./modules/commands');
-const DiscordModule   = require('./modules/discord');
 
 const SHUTDOWN_PHRASES = [
   'server closed','server is closing','server stopped','shutting down',
