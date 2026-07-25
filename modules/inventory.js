@@ -25,7 +25,7 @@ class InventoryModule {
     logger.info('[Inventory] Module started.');
   }
 
-  stop() { clearInterval(this._timer); this._timer = null; }
+    stop() { clearInterval(this._timer); this._timer = null; }
   }
 }
 
