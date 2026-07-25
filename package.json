@@ -2,7 +2,7 @@
   "name": "@workspace/minecraft-bot",
   "version": "1.0.0",
   "description": "24/7 Minecraft bot powered by Mineflayer",
-  "main": "src/index.js",
+  "main": "node index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node src/index.js"
