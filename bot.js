@@ -54,12 +54,8 @@ function createBot() {
 
   const movement  = new MovementModule(bot);
   const combat    = new CombatModule(bot);
-  const mining    = new MiningModule(bot);
-  const building  = new BuildingModule(bot);
-  const eating    = new EatingModule(bot);
-  const sleep     = new SleepModule(bot);
   const inventory = new InventoryModule(bot);
-  const commands  = new CommandsModule(bot, { movement, mining, building, sleep, inventory });
+  const commands  = new CommandsModule(bot, { inventory });
 
   if (!discord) {
     discord = new DiscordModule(bot, { commands });
