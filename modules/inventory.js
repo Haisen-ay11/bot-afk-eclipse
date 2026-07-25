@@ -26,3 +26,7 @@ class InventoryModule {
   }
 
   stop() { clearInterval(this._timer); this._timer = null; }
+  }
+}
+
+module.exports = InventoryModule;
