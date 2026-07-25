@@ -15,10 +15,6 @@ const logger  = require('./logger');
 
 const MovementModule  = require('./modules/movement');
 const CombatModule    = require('./modules/combat');
-const MiningModule    = require('./modules/mining');
-const BuildingModule  = require('./modules/building');
-const EatingModule    = require('./modules/eating');
-const SleepModule     = require('./modules/sleep');
 const InventoryModule = require('./modules/inventory');
 const CommandsModule  = require('./modules/commands');
 const DiscordModule   = require('./modules/discord');
