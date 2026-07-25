@@ -49,7 +49,6 @@ function createBot() {
 
   bot.loadPlugin(pathfinder);
   bot.loadPlugin(pvp);
-  bot.loadPlugin(autoEat);
   bot.loadPlugin(armorManager);
 
   const movement  = new MovementModule(bot);
@@ -83,7 +82,7 @@ function createBot() {
   });
 
   bot.on('end', reason => {
-    _cleanup(movement, combat, eating, sleep, inventory);
+    _cleanup(movement, combat,  inventory);
     if (_shutdownFlag) { logger.info('[Bot] Closed after shutdown. Waiting.'); return; }
     if (isServerShutdown(reason)) { logger.info('[Bot] Shutdown via end reason.'); discord?.send('🔴 Server shut down.'); return; }
     logger.info(`[Bot] Disconnected (${reason}). Reconnecting in ${config.reconnect.delayMs / 1000}s…`);
