@@ -57,14 +57,6 @@ function createBot() {
   const inventory = new InventoryModule(bot);
   const commands  = new CommandsModule(bot, { inventory });
 
-  if (!discord) {
-    discord = new DiscordModule(bot, { commands });
-    discord.start().catch(err => logger.error(`[Discord] Start error: ${err.message}`));
-  } else {
-    discord.bot = bot;
-    discord.mods.commands = commands;
-  }
-
   bot.once('spawn', () => {
     logger.info(`[Bot] Spawned in ${bot.game?.dimension ?? 'unknown'} at ${_pos()}.`);
     discord?.send(`✅ Spawned at ${_pos()}.`);
