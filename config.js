@@ -9,7 +9,7 @@ module.exports = {
     port:     parseInt(process.env.MC_PORT || '28387', 10),
     username: process.env.MC_USERNAME || 'EclipseBot',
     password: process.env.MC_PASSWORD || undefined,
-    auth:     process.env.MC_AUTH     || 'offline',
+    auth:     process.env.MC_AUTH     || 'online',
     version:  process.env.MC_VERSION  || '1.21.1',
     checkTimeoutInterval: 30_000,
   },
